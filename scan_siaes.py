@@ -102,10 +102,12 @@ def main():
                     "nb_postes_ouverts": len(offres),
                     "postes": [
                         {
+                            "id": p["id"],
                             "titre": p["appellation_modifiee"],
                             "type_contrat": p.get("type_contrat", ""),
                             "description": p.get("description", ""),
                             "lieu": (p.get("lieu") or {}).get("nom", s["ville"]),
+                            "url": f"https://emplois.inclusion.beta.gouv.fr/company/job_description/{p['id']}/card",
                         }
                         for p in offres
                     ],

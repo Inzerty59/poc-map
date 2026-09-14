@@ -1,82 +1,6 @@
 {
-  "generated_at": "2026-09-08T16:41:55+0200",
+  "generated_at": "2026-09-14T15:12:48+0200",
   "structures": [
-    {
-      "siren": "835082421",
-      "siret": "83508242100024",
-      "raison_sociale": "INZERTY",
-      "enseigne": "Inzerty Paris",
-      "adresse": "3 Rue d'Hauteville",
-      "code_postal": "75010",
-      "ville": "Paris",
-      "departement": "75",
-      "telephone": "06.47.23.20.32",
-      "site_web": "http://inzerty.fr",
-      "lat": 48.871189,
-      "lon": 2.349704,
-      "nb_postes_ouverts": 4,
-      "postes": [
-        {
-          "titre": "Ingénieur·e Système Automation Junior",
-          "type_contrat": "CDD insertion",
-          "description": "🚀 En quête d’un premier défi technique dans un environnement où l’automatisation, l’innovation et les systèmes de mesure sont au cœur des projets industriels ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant qu'Ingénieur·e Système Automation Junior** ?\r\n\r\nTu intégreras une équipe technique en charge de concevoir et de faire évoluer un laboratoire de mesure nouvelle génération. Tu contribueras à l'automatisation de bancs d'essais, au développement d'outils logiciels et à la digitalisation des processus de contrôle dans un environnement mêlant informatique, électronique et instrumentation.\r\n\r\nSi tu apprécies les projets techniques, le développement logiciel et les environnements industriels, cette opportunité est faite pour toi.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Analyse des besoins et conception**\r\n\r\nÉchanger avec les équipes techniques afin de comprendre les besoins, participer à la rédaction des spécifications fonctionnelles et techniques et concevoir les futures architectures des systèmes de mesure.\r\n\r\n**🍊 Mardi – Développement et automatisation**\r\n\r\nDévelopper ou faire évoluer des outils logiciels permettant l'acquisition, le traitement et la traçabilité des données, tout en automatisant progressivement les bancs d'essais.\r\n\r\n**🍊 Mercredi – Intégration et validation**\r\n\r\nParticiper à l'intégration des différents composants (logiciels, électroniques, mécaniques ou optiques), réaliser les essais techniques et vérifier la conformité des systèmes développés.\r\n\r\n**🍊 Jeudi – Qualité et documentation**\r\n\r\nRédiger les procédures, les rapports de tests et la documentation technique afin d'assurer la qualité et la traçabilité des développements réalisés.\r\n\r\n**🍊 Vendredi – Déploiement et amélioration continue**\r\n\r\nAccompagner les utilisateurs lors de la mise en service des solutions, assurer le support technique et participer à l'amélioration continue des outils et des processus.\r\n\r\n**🙌 Les missions te parlent ? Alors, tu es probablement la bonne personne pour rejoindre l'équipe !**",
-          "lieu": "Saint-Ouen-sur-Seine"
-        },
-        {
-          "titre": "Consultant·e Fonctionnel·le SI Junior (Business Analyst) - F/H",
-          "type_contrat": "CDD insertion",
-          "description": "🚀 En quête d’un nouveau défi professionnel dans un environnement où l’analyse des besoins, la coordination et la conception fonctionnelle occupent une place centrale ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant que Consultant·e Fonctionnel·le / Business Analyst Junior** ?\r\n\r\nTu intégreras une équipe projet spécialisée dans le développement d’une solution innovante dédiée au secteur des transports. Ton rôle sera d’assurer le lien entre les équipes métiers et les équipes techniques afin de comprendre les besoins, les formaliser et accompagner leur mise en œuvre.\r\n\r\nTu participeras à la conception fonctionnelle de la solution, à la rédaction de la documentation projet ainsi qu’au suivi des différentes phases de réalisation.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Analyse des besoins**\r\n\r\nParticiper aux échanges avec les métiers afin de comprendre leurs besoins.\r\n\r\nContribuer à la formalisation des demandes et à leur analyse.\r\n\r\n**🍊 Mardi – Documentation fonctionnelle**\r\n\r\nRédiger et mettre à jour la documentation projet.\r\n\r\nFormaliser les règles de gestion, les parcours utilisateurs et les spécifications fonctionnelles.\r\n\r\n**🍊 Mercredi – Coordination projet**\r\n\r\nÉchanger avec les développeur·ses afin de répondre aux questions fonctionnelles.\r\n\r\nParticiper aux réunions projet et assurer le suivi des actions.\r\n\r\n**🍊 Jeudi – Suivi des développements**\r\n\r\nSuivre l'avancement des fonctionnalités.\r\n\r\nParticiper à la préparation des recettes et au suivi des anomalies.\r\n\r\n**🍊 Vendredi – Amélioration continue**\r\n\r\nMettre à jour la documentation.\r\n\r\nParticiper aux ateliers d'amélioration des processus et des méthodes de travail.\r\n\r\n**🙌 Les missions te parlent ? Alors tu es peut-être la personne que nous recherchons !**",
-          "lieu": "Paris 11e"
-        },
-        {
-          "titre": "Testeur QA (H/F)",
-          "type_contrat": "CDD insertion",
-          "description": "Tu as le goût du détail, tu aimes comprendre comment les choses fonctionnent et repérer ce qui pourrait être amélioré ?\r\nTu as déjà une expérience en tests logiciels ou tu souhaites t’investir dans un environnement structuré où la rigueur et la curiosité sont valorisées ?\r\n🚀 Et si tu rejoignais Inzerty, une ESN inclusive et engagée, pour intervenir en tant que Testeur QA chez l’un de nos clients grands comptes du secteur du transport, basé à Saint-Denis ?\r\n________________________________________\r\n\r\n🌟 Tu te demandes en quoi consistera ton rôle ? Voici un aperçu de tes futures missions au quotidien :\r\n🍊 Lundi – Préparation des tests :\r\nTu analyses les spécifications fonctionnelles et tu rédiges les plans de test correspondant aux besoins métiers.\r\n🍊 Mardi – Exécution et suivi :\r\nTu exécutes les cas de test, assures le suivi des campagnes de tests et remontes les résultats de manière claire et structurée.\r\n🍊 Mercredi – Gestion des anomalies :\r\nTu identifies, qualifies et suis les anomalies détectées, en collaboration avec les équipes de développement et les Product Owners.\r\n🍊 Jeudi – Coordination et reporting :\r\nTu renseignes l’avancement des tests dans les outils projet (Jira, Xray, Squash) et participes aux réunions d’équipe pour partager les résultats et proposer des axes d’amélioration.\r\n🍊 Vendredi – Amélioration continue :\r\nTu contribues à la fiabilisation des processus de test et participes à la mise à jour du patrimoine de tests de non-régression.",
-          "lieu": "Saint-Denis"
-        },
-        {
-          "titre": "Développeur·se Back Office Java Junior H/F",
-          "type_contrat": "CDD insertion",
-          "description": "🚀 En quête d’un nouveau défi professionnel dans un environnement où le développement logiciel, les API et les architectures back-end occupent une place centrale ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant que Développeur·se Back Office Java Junior **?\r\n\r\nTu intégreras une équipe de développement en charge de concevoir et faire évoluer une plateforme dédiée au secteur des transports.\r\n\r\nAux côtés d'une équipe expérimentée, tu participeras au développement des nouvelles fonctionnalités, à l'amélioration des applications existantes et à la qualité des développements réalisés.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Développement**\r\n\r\nParticiper au développement de nouvelles fonctionnalités en Java.\r\n\r\nContribuer à l'amélioration des applications existantes.\r\n\r\n**🍊 Mardi – API & intégration**\r\n\r\nParticiper au développement et à l'évolution des API.\r\n\r\nCollaborer avec les autres équipes techniques afin d'assurer les intégrations.\r\n\r\n**🍊 Mercredi – Tests**\r\n\r\nRéaliser des tests unitaires et participer aux tests d'intégration.\r\n\r\nCorriger les anomalies identifiées.\r\n\r\n**🍊 Jeudi – Documentation**\r\n\r\nDocumenter les développements réalisés.\r\n\r\nParticiper aux revues de code et aux échanges techniques de l'équipe.\r\n\r\n**🍊 Vendredi – Amélioration continue**\r\n\r\nParticiper aux rituels Agile.\r\n\r\nContribuer aux réflexions techniques et aux améliorations de la plateforme.\r\n\r\n**🙌 Les missions te parlent ? Alors tu es peut-être la personne que nous recherchons !**",
-          "lieu": "Paris 15e"
-        }
-      ]
-    },
-    {
-      "siren": "484873955",
-      "siret": "48487395500021",
-      "raison_sociale": "ENVIE 2E",
-      "enseigne": "Envie 2E Lesquin",
-      "adresse": "2 Boulevard Thomson",
-      "code_postal": "59810",
-      "ville": "Lesquin",
-      "departement": "59",
-      "telephone": "",
-      "site_web": "",
-      "lat": 50.590246,
-      "lon": 3.119207,
-      "nb_postes_ouverts": 3,
-      "postes": [
-        {
-          "titre": "Chauffeur - Permis CE",
-          "type_contrat": "CDD insertion",
-          "description": "Envie 2e est une entreprise solidaire spécialisée dans la collecte et le recyclage d'appareils électriques et électroniques. Nous faisons partie du réseau Envie, acteur majeur de l'économie circulaire en France, engagé pour la transition énergétique 🌍 et la réduction des déchets. Dans le cadre de notre développement, nous recrutons un(e) Chauffeur Collecteur en CDDI.\r\n\r\n🎯 Missions :\r\nSous la responsabilité du responsable de l’équipe, vos principales missions seront :\r\n\r\nCollecte des déchets électroniques et électriques auprès des clients et partenaires (particuliers, entreprises, collectivités) 🚚💡.\r\nConduite et manœuvre du véhicule de collecte dans le respect des règles de sécurité et des itinéraires définis 🚗🛣️.\r\nChargement et déchargement des équipements sur le véhicule, avec tri et organisation des déchets ♻️📦.\r\nVérification des documents de transport et des bons de collecte pour assurer une gestion correcte des déchets ♻️📝.\r\nEntretien du véhicule et signalement des pannes éventuelles 🚗🔧.\r\nCDDI 35h - 6 mois renouvelable.",
-          "lieu": "Lesquin"
-        },
-        {
-          "titre": "AGENT DE QUAI",
-          "type_contrat": "CDD insertion",
-          "description": "Envie 2e est une entreprise solidaire spécialisée dans la collecte  et le recyclage d'appareils électriques et électroniques. Nous faisons partie du réseau Envie, acteur majeur de l'économie circulaire en France, engagé pour la transition énergétique 🌍 et la réduction des déchets. Dans le cadre de notre développement, nous recrutons un(e) Agent de Quai en CDDI.\r\n\r\n🎯 Missions :\r\nSous la responsabilité du responsable de l’équipe, vos principales missions seront :\r\n\r\n* Chargement et déchargement des camions avec les équipements à recycler ou réparer 🚚📦.\r\n* Tri des DEEE selon les différentes catégories et normes environnementales ♻️🌱.\r\n* Rangement et gestion des stocks sur le quai et dans les zones de stockage 🔑📦.\r\n* Respect des règles de sécurité et des normes environnementales en place ⚠️🛠️.\r\n* Veiller à la bonne organisation du quai pour assurer une logistique fluide et efficace 🔄🚛.\r\n\r\n⚠️ Horaires 08h - 16h et 12h - 20h (une semaine sur deux)\r\nContrat CDDI de 35h - 6 mois renouvelable",
-          "lieu": "Lesquin"
-        },
-        {
-          "titre": "AGENT DE DEPOLLUTION D3E (déchets électriques)",
-          "type_contrat": "CDD insertion",
-          "description": "Envie 2e est une entreprise solidaire spécialisée dans la collecte et le recyclage d'appareils électriques et électroniques. Nous faisons partie du réseau Envie, acteur majeur de l'économie circulaire en France, engagé pour la transition énergétique 🌍 et la réduction des déchets. Dans le cadre de notre développement, nous recrutons un(e) Agent de Dépollution en CDDI.\r\n\r\n🎯 Missions :\r\nSous la responsabilité du responsable de l’équipe, vos principales missions seront :\r\n\r\n* Collecte et tri des déchets électroniques et électriques (DEEE) en vue de leur dépollution et recyclage ♻️.\r\n* Dépollution des équipements : identifier et extraire les composants  (plastique, aluminium, métaux, verre...) conformément aux normes en vigueur ⚡.\r\n* Traitement des matériaux selon les procédures et les normes environnementales 🌱.\r\n* Respect des protocoles de sécurité et des règles de gestion des déchets ⚠️.\r\n* Contrôle qualité des produits traités et rapport des anomalies 🔍.\r\n* Entretien du poste de travail\r\n\r\n⚠️ Horaires postés : 7h - 14h30 et 14h30 - 22h (une semaine sur deux)\r\nContrat CDDI de 35h de 6 mois renouvelable",
-          "lieu": "Lesquin"
-        }
-      ]
-    },
     {
       "siren": "835082421",
       "siret": "83508242100016",
@@ -93,10 +17,61 @@
       "nb_postes_ouverts": 1,
       "postes": [
         {
+          "id": 118443,
           "titre": "Technicien(ne) d’exploitation informatique",
           "type_contrat": "CDD insertion",
           "description": "En quête d’un nouveau défi professionnel dans un environnement critique, stimulant et humain, où la technologie rime avec inclusion ?\r\n\r\n🚀 Et si tu rejoignais Inzerty, une ESN inclusive qui accompagne ses talents vers l’emploi durable, pour intervenir chez l’un de nos clients grands comptes en tant que Technicien(ne) d’exploitation, et garantir la supervision, la performance et la résilience de leurs systèmes en production ?\r\n\r\n \r\n\r\n🌟 Tu te demandes en quoi consistera ton rôle ?\r\nVoici un aperçu de tes futures missions au quotidien :\r\n\r\n \r\n\r\n🍊 Lundi – Supervision & exploitation\r\n\r\nAssurer la supervision fonctionnelle des systèmes et applications.\r\nSurveiller les alertes, analyser les incidents et garantir la continuité de service.\r\nGérer le quotidien de l’exploitation dans un environnement de production critique.\r\n \r\n\r\n🍊 Mardi – Analyse & performances\r\n\r\nRéaliser une analyse pointue des logs.\r\nSuivre les performances système et détecter les anomalies.\r\nExploiter les outils d’observabilité pour anticiper les incidents.\r\n\r\n\r\n🍊 Mercredi – Gestion d’incidents & communication\r\n\r\nPrendre en charge les incidents techniques.\r\nExpliquer clairement et étape par étape l’analyse d’une panne.\r\nDonner de la visibilité en cellule de crise sur l’avancement et la résolution.\r\n\r\n🍊 Jeudi – Gestion de crise, REX & Postmortem\r\n\r\nParticiper activement aux cellules de crise .\r\nContribuer aux REX et postmortems afin d’améliorer les processus et la fiabilité du système.\r\n\r\n\r\n🍊 Vendredi – Outils & amélioration continue\r\n\r\nExploiter et améliorer les outils de supervision et de performance.\r\nTravailler sur un environnement Linux et contribuer à la montée en maturité de l’exploitation.",
-          "lieu": "Lille"
+          "lieu": "Lille",
+          "url": "https://emplois.inclusion.beta.gouv.fr/company/job_description/118443/card"
+        }
+      ]
+    },
+    {
+      "siren": "835082421",
+      "siret": "83508242100024",
+      "raison_sociale": "INZERTY",
+      "enseigne": "Inzerty Paris",
+      "adresse": "3 Rue d'Hauteville",
+      "code_postal": "75010",
+      "ville": "Paris",
+      "departement": "75",
+      "telephone": "06.47.23.20.32",
+      "site_web": "http://inzerty.fr",
+      "lat": 48.871189,
+      "lon": 2.349704,
+      "nb_postes_ouverts": 4,
+      "postes": [
+        {
+          "id": 140396,
+          "titre": "Ingénieur·e Système Automation Junior",
+          "type_contrat": "CDD insertion",
+          "description": "🚀 En quête d’un premier défi technique dans un environnement où l’automatisation, l’innovation et les systèmes de mesure sont au cœur des projets industriels ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant qu'Ingénieur·e Système Automation Junior** ?\r\n\r\nTu intégreras une équipe technique en charge de concevoir et de faire évoluer un laboratoire de mesure nouvelle génération. Tu contribueras à l'automatisation de bancs d'essais, au développement d'outils logiciels et à la digitalisation des processus de contrôle dans un environnement mêlant informatique, électronique et instrumentation.\r\n\r\nSi tu apprécies les projets techniques, le développement logiciel et les environnements industriels, cette opportunité est faite pour toi.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Analyse des besoins et conception**\r\n\r\nÉchanger avec les équipes techniques afin de comprendre les besoins, participer à la rédaction des spécifications fonctionnelles et techniques et concevoir les futures architectures des systèmes de mesure.\r\n\r\n**🍊 Mardi – Développement et automatisation**\r\n\r\nDévelopper ou faire évoluer des outils logiciels permettant l'acquisition, le traitement et la traçabilité des données, tout en automatisant progressivement les bancs d'essais.\r\n\r\n**🍊 Mercredi – Intégration et validation**\r\n\r\nParticiper à l'intégration des différents composants (logiciels, électroniques, mécaniques ou optiques), réaliser les essais techniques et vérifier la conformité des systèmes développés.\r\n\r\n**🍊 Jeudi – Qualité et documentation**\r\n\r\nRédiger les procédures, les rapports de tests et la documentation technique afin d'assurer la qualité et la traçabilité des développements réalisés.\r\n\r\n**🍊 Vendredi – Déploiement et amélioration continue**\r\n\r\nAccompagner les utilisateurs lors de la mise en service des solutions, assurer le support technique et participer à l'amélioration continue des outils et des processus.\r\n\r\n**🙌 Les missions te parlent ? Alors, tu es probablement la bonne personne pour rejoindre l'équipe !**",
+          "lieu": "Saint-Ouen-sur-Seine",
+          "url": "https://emplois.inclusion.beta.gouv.fr/company/job_description/140396/card"
+        },
+        {
+          "id": 137515,
+          "titre": "Consultant·e Fonctionnel·le SI Junior (Business Analyst) - F/H",
+          "type_contrat": "CDD insertion",
+          "description": "🚀 En quête d’un nouveau défi professionnel dans un environnement où l’analyse des besoins, la coordination et la conception fonctionnelle occupent une place centrale ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant que Consultant·e Fonctionnel·le / Business Analyst Junior** ?\r\n\r\nTu intégreras une équipe projet spécialisée dans le développement d’une solution innovante dédiée au secteur des transports. Ton rôle sera d’assurer le lien entre les équipes métiers et les équipes techniques afin de comprendre les besoins, les formaliser et accompagner leur mise en œuvre.\r\n\r\nTu participeras à la conception fonctionnelle de la solution, à la rédaction de la documentation projet ainsi qu’au suivi des différentes phases de réalisation.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Analyse des besoins**\r\n\r\nParticiper aux échanges avec les métiers afin de comprendre leurs besoins.\r\n\r\nContribuer à la formalisation des demandes et à leur analyse.\r\n\r\n**🍊 Mardi – Documentation fonctionnelle**\r\n\r\nRédiger et mettre à jour la documentation projet.\r\n\r\nFormaliser les règles de gestion, les parcours utilisateurs et les spécifications fonctionnelles.\r\n\r\n**🍊 Mercredi – Coordination projet**\r\n\r\nÉchanger avec les développeur·ses afin de répondre aux questions fonctionnelles.\r\n\r\nParticiper aux réunions projet et assurer le suivi des actions.\r\n\r\n**🍊 Jeudi – Suivi des développements**\r\n\r\nSuivre l'avancement des fonctionnalités.\r\n\r\nParticiper à la préparation des recettes et au suivi des anomalies.\r\n\r\n**🍊 Vendredi – Amélioration continue**\r\n\r\nMettre à jour la documentation.\r\n\r\nParticiper aux ateliers d'amélioration des processus et des méthodes de travail.\r\n\r\n**🙌 Les missions te parlent ? Alors tu es peut-être la personne que nous recherchons !**",
+          "lieu": "Paris 11e",
+          "url": "https://emplois.inclusion.beta.gouv.fr/company/job_description/137515/card"
+        },
+        {
+          "id": 115581,
+          "titre": "Testeur QA (H/F)",
+          "type_contrat": "CDD insertion",
+          "description": "Tu as le goût du détail, tu aimes comprendre comment les choses fonctionnent et repérer ce qui pourrait être amélioré ?\r\nTu as déjà une expérience en tests logiciels ou tu souhaites t’investir dans un environnement structuré où la rigueur et la curiosité sont valorisées ?\r\n🚀 Et si tu rejoignais Inzerty, une ESN inclusive et engagée, pour intervenir en tant que Testeur QA chez l’un de nos clients grands comptes du secteur du transport, basé à Saint-Denis ?\r\n________________________________________\r\n\r\n🌟 Tu te demandes en quoi consistera ton rôle ? Voici un aperçu de tes futures missions au quotidien :\r\n🍊 Lundi – Préparation des tests :\r\nTu analyses les spécifications fonctionnelles et tu rédiges les plans de test correspondant aux besoins métiers.\r\n🍊 Mardi – Exécution et suivi :\r\nTu exécutes les cas de test, assures le suivi des campagnes de tests et remontes les résultats de manière claire et structurée.\r\n🍊 Mercredi – Gestion des anomalies :\r\nTu identifies, qualifies et suis les anomalies détectées, en collaboration avec les équipes de développement et les Product Owners.\r\n🍊 Jeudi – Coordination et reporting :\r\nTu renseignes l’avancement des tests dans les outils projet (Jira, Xray, Squash) et participes aux réunions d’équipe pour partager les résultats et proposer des axes d’amélioration.\r\n🍊 Vendredi – Amélioration continue :\r\nTu contribues à la fiabilisation des processus de test et participes à la mise à jour du patrimoine de tests de non-régression.",
+          "lieu": "Saint-Denis",
+          "url": "https://emplois.inclusion.beta.gouv.fr/company/job_description/115581/card"
+        },
+        {
+          "id": 137516,
+          "titre": "Développeur·se Back Office Java Junior H/F",
+          "type_contrat": "CDD insertion",
+          "description": "🚀 En quête d’un nouveau défi professionnel dans un environnement où le développement logiciel, les API et les architectures back-end occupent une place centrale ?\r\n\r\nEt si tu rejoignais **Inzerty, une ESN inclusive** qui accompagne ses talents vers l’emploi durable, pour intervenir **chez l’un de nos clients en tant que Développeur·se Back Office Java Junior **?\r\n\r\nTu intégreras une équipe de développement en charge de concevoir et faire évoluer une plateforme dédiée au secteur des transports.\r\n\r\nAux côtés d'une équipe expérimentée, tu participeras au développement des nouvelles fonctionnalités, à l'amélioration des applications existantes et à la qualité des développements réalisés.\r\n\r\n**🌟 À quoi ressemblera ton quotidien ?**\r\n\r\n**🍊 Lundi – Développement**\r\n\r\nParticiper au développement de nouvelles fonctionnalités en Java.\r\n\r\nContribuer à l'amélioration des applications existantes.\r\n\r\n**🍊 Mardi – API & intégration**\r\n\r\nParticiper au développement et à l'évolution des API.\r\n\r\nCollaborer avec les autres équipes techniques afin d'assurer les intégrations.\r\n\r\n**🍊 Mercredi – Tests**\r\n\r\nRéaliser des tests unitaires et participer aux tests d'intégration.\r\n\r\nCorriger les anomalies identifiées.\r\n\r\n**🍊 Jeudi – Documentation**\r\n\r\nDocumenter les développements réalisés.\r\n\r\nParticiper aux revues de code et aux échanges techniques de l'équipe.\r\n\r\n**🍊 Vendredi – Amélioration continue**\r\n\r\nParticiper aux rituels Agile.\r\n\r\nContribuer aux réflexions techniques et aux améliorations de la plateforme.\r\n\r\n**🙌 Les missions te parlent ? Alors tu es peut-être la personne que nous recherchons !**",
+          "lieu": "Paris 15e",
+          "url": "https://emplois.inclusion.beta.gouv.fr/company/job_description/137516/card"
         }
       ]
     }

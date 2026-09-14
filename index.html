@@ -189,51 +189,32 @@ Object.values(byLocation).forEach(list => {
   L.marker([list[0].lat, list[0].lon], options).bindPopup(html).addTo(pinLayer);
 });
 
-// correspondance code departement -> code region (decoupage INSEE 2016)
-const DEPT_TO_REGION = {
-  '01': '84', '03': '84', '07': '84', '15': '84', '26': '84', '38': '84', '42': '84', '43': '84', '63': '84', '69': '84', '73': '84', '74': '84',
-  '21': '27', '25': '27', '39': '27', '58': '27', '70': '27', '71': '27', '89': '27', '90': '27',
-  '22': '53', '29': '53', '35': '53', '56': '53',
-  '18': '24', '28': '24', '36': '24', '37': '24', '41': '24', '45': '24',
-  '2A': '94', '2B': '94',
-  '08': '44', '10': '44', '51': '44', '52': '44', '54': '44', '55': '44', '57': '44', '67': '44', '68': '44', '88': '44',
-  '02': '32', '59': '32', '60': '32', '62': '32', '80': '32',
-  '75': '11', '77': '11', '78': '11', '91': '11', '92': '11', '93': '11', '94': '11', '95': '11',
-  '14': '28', '27': '28', '50': '28', '61': '28', '76': '28',
-  '16': '75', '17': '75', '19': '75', '23': '75', '24': '75', '33': '75', '40': '75', '47': '75', '64': '75', '79': '75', '86': '75', '87': '75',
-  '09': '76', '11': '76', '12': '76', '30': '76', '31': '76', '32': '76', '34': '76', '46': '76', '48': '76', '65': '76', '66': '76', '81': '76', '82': '76',
-  '44': '52', '49': '52', '53': '52', '72': '52', '85': '52',
-  '04': '93', '05': '93', '06': '93', '13': '93', '83': '93', '84': '93'
-};
-
-fetch('https://cdn.jsdelivr.net/gh/gregoiredavid/france-geojson@master/regions.geojson')
+fetch('https://cdn.jsdelivr.net/gh/gregoiredavid/france-geojson@master/departements.geojson')
   .then(r => r.json())
   .then(geo => {
-    // Corse retiree (pas utile pour ce POC)
-    geo.features = geo.features.filter(f => f.properties.code !== '94');
+    // Corse retiree (pas utile pour ce POC) : filtre les departements 2A/2B
+    geo.features = geo.features.filter(f => f.properties.code !== '2A' && f.properties.code !== '2B');
 
-    const regionLayer = L.geoJSON(geo, {
+    const deptLayer = L.geoJSON(geo, {
       style: deptStyle,
       onEachFeature: (feature, layer) => {
         layer.on('mouseover', () => layer.setStyle({ fillColor: ORANGE, fillOpacity: 0.35 }));
         layer.on('mouseout', () => layer.setStyle(deptStyle()));
       }
     }).addTo(map);
-    regionLayer.bringToBack();
+    deptLayer.bringToBack();
     map.invalidateSize();
-    map.fitBounds(regionLayer.getBounds());
+    map.fitBounds(deptLayer.getBounds());
 
-    const byRegion = {};
+    const byDept = {};
     entreprises.forEach(e => {
       if (!e.lat || !e.lon) return;
-      const region = DEPT_TO_REGION[e.departement];
-      if (!region) return;
-      (byRegion[region] = byRegion[region] || []).push(e);
+      (byDept[e.departement] = byDept[e.departement] || []).push(e);
     });
 
-    regionLayer.eachLayer(layer => {
+    deptLayer.eachLayer(layer => {
       const code = layer.feature.properties.code;
-      const list = byRegion[code];
+      const list = byDept[code];
       if (!list) return;
       const center = layer.getBounds().getCenter();
       const icon = L.divIcon({

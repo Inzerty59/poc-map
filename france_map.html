@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiches entreprises</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5XKBC2ztACnhHII_VWkMcnHcOEFHvKMs&libraries=places"></script>
+<style>
+  html, body { margin: 0; height: 100%; font-family: -apple-system, Segoe UI, sans-serif; }
+  #map { width: 100%; height: 100%; background: #ffffff; }
+  .leaflet-container { background: #ffffff; }
+
+  .dept-count {
+    background: #EF7D00;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.9rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,.35);
+    cursor: pointer;
+  }
+
+  .fiche { min-width: 240px; }
+  .gbiz { font-size: 0.85rem; }
+  .gbiz .gbiz-loading, .gbiz .gbiz-error { color: #888; font-style: italic; }
+  .gbiz .gbiz-name { font-weight: 700; margin-bottom: 2px; }
+  .gbiz .gbiz-rating { color: #EF7D00; font-weight: 700; }
+  .gbiz .gbiz-rating .stars { letter-spacing: 1px; }
+  .gbiz .gbiz-photo { width: 100%; max-height: 140px; object-fit: cover; border-radius: 4px; margin: 6px 0; display: block; }
+  .gbiz .gbiz-hours { margin-top: 4px; }
+  .gbiz .gbiz-hours summary { cursor: pointer; color: #555; }
+  .gbiz .gbiz-hours ul { margin: 4px 0 0; padding-left: 16px; }
+  .gbiz .gbiz-review { margin-top: 6px; padding-top: 6px; border-top: 1px dashed #eee; color: #555; }
+  .gbiz .gbiz-review .who { font-weight: 600; color: #333; }
+  .fiche .offres { margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; font-weight: 700; color: #EF7D00; font-size: 0.85rem; }
+  .fiche a { color: #EF7D00; }
+  .fiche a.gmaps-btn {
+    margin-top: 8px; display: block; width: 100%; box-sizing: border-box;
+    background: #EF7D00; color: #fff; border: none; border-radius: 4px;
+    padding: 6px 8px; font-size: 0.8rem; cursor: pointer;
+    text-align: center; text-decoration: none;
+  }
+  .gmaps-btn:hover { opacity: 0.9; }
+
+  .logo-marker {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #EF7D00;
+    box-shadow: 0 1px 4px rgba(0,0,0,.35);
+    object-fit: contain;
+    padding: 4px;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+const entreprises = [{"siren": "402191662", "siret": "40219166200467", "nom": "JANUS SAS", "enseigne": "JANUS SAS", "adresse": "QUAI FREYCINET 135 AVENUE DE L'UNIVERSITE 59140 DUNKERQUE", "code_postal": "59140", "ville": "DUNKERQUE", "departement": "59", "lat": 51.038153804, "lon": 2.3701593251, "activite": "78.20Z", "effectif_tranche": "21", "date_creation": "1995-10-01", "forme_juridique": "5710", "maison_mere": "GROUPE VITAMINE T.", "telephone": "", "site_web": "", "effectif_label": "50 a 99 salaries", "forme_juridique_label": "SAS", "logo": "logos/402191662.svg"}, {"siren": "835082421", "siret": "83508242100016", "nom": "INZERTY", "enseigne": "INZERTY", "adresse": "2 BOULEVARD THOMSON 59810 LESQUIN", "code_postal": "59810", "ville": "LESQUIN", "departement": "59", "lat": 50.5909441860702, "lon": 3.11852693530996, "activite": "62.02A", "effectif_tranche": "12", "date_creation": "2018-01-04", "forme_juridique": "5710", "maison_mere": "GROUPE VITAMINE T.", "telephone": "03 20 61 70 70", "site_web": "https://inzerty.fr/", "effectif_label": "20 a 49 salaries", "forme_juridique_label": "SAS", "logo": "logos/835082421.png"}, {"siren": "835082421", "siret": "83508242100024", "nom": "INZERTY", "enseigne": "INZERTY", "adresse": "3 CITE D'HAUTEVILLE 75010 PARIS", "code_postal": "75010", "ville": "PARIS", "departement": "75", "lat": 48.87658842, "lon": 2.3519960715, "activite": "62.02A", "effectif_tranche": "12", "date_creation": "2018-01-04", "forme_juridique": "5710", "maison_mere": "GROUPE VITAMINE T.", "telephone": "06.47.23.20.32", "site_web": "http://inzerty.fr", "effectif_label": "20 a 49 salaries", "forme_juridique_label": "SAS", "logo": "logos/835082421.png"}, {"siren": "512602459", "siret": "51260245900020", "nom": "SOLUVAL", "enseigne": "SOLUVAL", "adresse": "4 RUE DES FRERES FACHE 59580 ANICHE", "code_postal": "59580", "ville": "ANICHE", "departement": "59", "lat": 50.333983959, "lon": 3.2419609318, "activite": "45.11Z", "effectif_tranche": "21", "date_creation": "2009-05-20", "forme_juridique": "5710", "maison_mere": "GROUPE VITAMINE T.", "telephone": "", "site_web": "", "effectif_label": "50 a 99 salaries", "forme_juridique_label": "SAS", "logo": "logos/512602459.png"}, {"siren": "483339842", "siret": "48333984200021", "nom": "JOIGNY", "enseigne": "LE PETIT MAGASIN", "adresse": "LD LA PETITE ILE RUE DES ENTREPRENEURS 89300 JOIGNY", "code_postal": "89300", "ville": "JOIGNY", "departement": "89", "lat": 47.978231531, "lon": 3.3807006454, "activite": "47.19B", "effectif_tranche": "03", "date_creation": "2005-07-01", "forme_juridique": "5202", "maison_mere": null, "telephone": "", "site_web": "", "effectif_label": "6 a 9 salaries", "forme_juridique_label": "SNC", "logo": "logos/483339842.png"}, {"siren": "428801419", "siret": "42880141900188", "nom": "S A S VITASERVICES", "enseigne": "S A S VITASERVICES", "adresse": "133 RUE DU ROUSSILLON 62700 BRUAY-LA-BUISSIERE", "code_postal": "62700", "ville": "BRUAY-LA-BUISSIERE", "departement": "62", "lat": 50.474079436, "lon": 2.5445222293, "activite": "81.21Z", "effectif_tranche": "32", "date_creation": "2000-01-01", "forme_juridique": "5710", "maison_mere": null, "telephone": "", "site_web": "", "effectif_label": "250 a 499 salaries", "forme_juridique_label": "SAS", "logo": "logos/428801419.png"}];
+const ORANGE = "#EF7D00";
+const ZOOM_THRESHOLD = 8;
+
+const map = L.map('map', { zoomControl: true, attributionControl: false });
+
+// fiche Google Business (note, avis, horaires, photo) recreee via Places API,
+// affichee dans le popup au clic — Google interdit d'embarquer sa vraie page
+// business en iframe (X-Frame-Options), donc on reconstruit l'essentiel nous-memes
+const placesService = new google.maps.places.PlacesService(document.createElement('div'));
+
+// cache persiste dans localStorage : tant que l'utilisateur ne vide pas son
+// navigateur, un rechargement de page (F5) ne redeclenche pas d'appels Places API
+const GBIZ_CACHE_KEY = 'gbizCache';
+let gbizCache = {};
+try { gbizCache = JSON.parse(localStorage.getItem(GBIZ_CACHE_KEY)) || {}; } catch (err) { gbizCache = {}; }
+
+function saveGbizCache() {
+  try { localStorage.setItem(GBIZ_CACHE_KEY, JSON.stringify(gbizCache)); } catch (err) { /* quota ou navigation privee : cache reste en memoire seulement */ }
+}
+
+function starsHtml(rating) {
+  const full = Math.round(rating);
+  return '★'.repeat(full) + '☆'.repeat(5 - full);
+}
+
+// extrait uniquement les champs serialisables (les objets Places API portent
+// des methodes, ex. photos[0].getUrl(), qui ne survivent pas a un JSON.stringify)
+function toPlainFiche(place) {
+  return {
+    name: place.name,
+    rating: place.rating || null,
+    user_ratings_total: place.user_ratings_total || 0,
+    formatted_phone_number: place.formatted_phone_number || null,
+    hours: (place.opening_hours && place.opening_hours.weekday_text) || null,
+    photoUrl: (place.photos && place.photos[0]) ? place.photos[0].getUrl({ maxWidth: 280 }) : null,
+    review: (place.reviews && place.reviews[0])
+      ? { author_name: place.reviews[0].author_name, rating: place.reviews[0].rating, text: place.reviews[0].text || '' }
+      : null,
+    url: place.url || null
+  };
+}
+
+function renderGbiz(el, fiche) {
+  if (!fiche) {
+    el.innerHTML = '<div class="gbiz-error">Fiche Google Business introuvable.</div>';
+    return;
+  }
+  const rating = fiche.rating
+    ? `<div class="gbiz-rating"><span class="stars">${starsHtml(fiche.rating)}</span> ${fiche.rating} (${fiche.user_ratings_total} avis)</div>`
+    : '';
+  const photo = fiche.photoUrl ? `<img class="gbiz-photo" src="${fiche.photoUrl}" alt="${fiche.name}">` : '';
+  const phone = fiche.formatted_phone_number ? `<div>${fiche.formatted_phone_number}</div>` : '';
+  const hours = fiche.hours
+    ? `<details class="gbiz-hours"><summary>Horaires</summary><ul>${fiche.hours.map(d => `<li>${d}</li>`).join('')}</ul></details>`
+    : '';
+  const review = fiche.review
+    ? `<div class="gbiz-review"><span class="who">${fiche.review.author_name}</span> — ${starsHtml(fiche.review.rating)}<br>${fiche.review.text.slice(0, 140)}${fiche.review.text.length > 140 ? '…' : ''}</div>`
+    : '';
+  const link = fiche.url ? `<div style="margin-top:6px;"><a href="${fiche.url}" target="_blank" rel="noopener">Voir la fiche complete sur Google</a></div>` : '';
+  el.innerHTML = `
+    <div class="gbiz-name">${fiche.name}</div>
+    ${rating}${photo}${phone}${hours}${review}${link}`;
+}
+
+function loadGbizFiche(el) {
+  const query = el.dataset.query;
+  if (Object.prototype.hasOwnProperty.call(gbizCache, query)) { renderGbiz(el, gbizCache[query]); return; }
+  placesService.findPlaceFromQuery({ query, fields: ['place_id'] }, (results, status) => {
+    if (status !== google.maps.places.PlacesServiceStatus.OK || !results || !results[0]) {
+      gbizCache[query] = null;
+      saveGbizCache();
+      renderGbiz(el, null);
+      return;
+    }
+    placesService.getDetails({
+      placeId: results[0].place_id,
+      fields: ['name', 'rating', 'user_ratings_total', 'formatted_phone_number', 'opening_hours', 'photos', 'reviews', 'url']
+    }, (place, status2) => {
+      const fiche = status2 === google.maps.places.PlacesServiceStatus.OK ? toPlainFiche(place) : null;
+      gbizCache[query] = fiche;
+      saveGbizCache();
+      renderGbiz(el, fiche);
+    });
+  });
+}
+
+map.on('popupopen', e => {
+  e.popup._contentNode.querySelectorAll('.gbiz').forEach(loadGbizFiche);
+});
+
+const clusterLayer = L.layerGroup();
+const pinLayer = L.layerGroup();
+
+function deptStyle() {
+  return { color: ORANGE, weight: 1, fillColor: '#ffffff', fillOpacity: 1 };
+}
+
+function makeFicheHtml(e) {
+  const query = `${e.enseigne} ${e.adresse} ${e.code_postal} ${e.ville}`;
+  const gbizId = `gbiz-${e.siret}`;
+  return `
+    <div class="fiche">
+      <div class="gbiz" id="${gbizId}" data-query="${query.replace(/"/g, '&quot;')}">
+        <div class="gbiz-loading">Chargement fiche Google Business...</div>
+      </div>
+      <div class="offres">x offres d'emploi disponibles</div>
+    </div>`;
+}
+
+// regroupe les entreprises qui partagent exactement la meme adresse (meme
+// immeuble/siege) sous un seul marker, avec chaque fiche listee dans le popup
+const byLocation = {};
+entreprises.forEach(e => {
+  if (!e.lat || !e.lon) return;
+  const key = e.lat.toFixed(5) + ',' + e.lon.toFixed(5);
+  (byLocation[key] = byLocation[key] || []).push(e);
+});
+
+Object.values(byLocation).forEach(list => {
+  const html = list.map(makeFicheHtml).join('<hr style="margin:8px 0;border:none;border-top:1px solid #eee;">');
+  // logo de la 1ere entreprise du lot si dispo, sinon pin bleu par defaut
+  const logo = list.find(e => e.logo)?.logo;
+  const options = logo ? {
+    icon: L.icon({ iconUrl: logo, iconSize: [56, 56], iconAnchor: [28, 28], popupAnchor: [0, -28], className: 'logo-marker' })
+  } : {};
+  L.marker([list[0].lat, list[0].lon], options).bindPopup(html).addTo(pinLayer);
+});
+
+// correspondance code departement -> code region (decoupage INSEE 2016)
+const DEPT_TO_REGION = {
+  '01': '84', '03': '84', '07': '84', '15': '84', '26': '84', '38': '84', '42': '84', '43': '84', '63': '84', '69': '84', '73': '84', '74': '84',
+  '21': '27', '25': '27', '39': '27', '58': '27', '70': '27', '71': '27', '89': '27', '90': '27',
+  '22': '53', '29': '53', '35': '53', '56': '53',
+  '18': '24', '28': '24', '36': '24', '37': '24', '41': '24', '45': '24',
+  '2A': '94', '2B': '94',
+  '08': '44', '10': '44', '51': '44', '52': '44', '54': '44', '55': '44', '57': '44', '67': '44', '68': '44', '88': '44',
+  '02': '32', '59': '32', '60': '32', '62': '32', '80': '32',
+  '75': '11', '77': '11', '78': '11', '91': '11', '92': '11', '93': '11', '94': '11', '95': '11',
+  '14': '28', '27': '28', '50': '28', '61': '28', '76': '28',
+  '16': '75', '17': '75', '19': '75', '23': '75', '24': '75', '33': '75', '40': '75', '47': '75', '64': '75', '79': '75', '86': '75', '87': '75',
+  '09': '76', '11': '76', '12': '76', '30': '76', '31': '76', '32': '76', '34': '76', '46': '76', '48': '76', '65': '76', '66': '76', '81': '76', '82': '76',
+  '44': '52', '49': '52', '53': '52', '72': '52', '85': '52',
+  '04': '93', '05': '93', '06': '93', '13': '93', '83': '93', '84': '93'
+};
+
+fetch('https://cdn.jsdelivr.net/gh/gregoiredavid/france-geojson@master/regions.geojson')
+  .then(r => r.json())
+  .then(geo => {
+    // Corse retiree (pas utile pour ce POC)
+    geo.features = geo.features.filter(f => f.properties.code !== '94');
+
+    const regionLayer = L.geoJSON(geo, {
+      style: deptStyle,
+      onEachFeature: (feature, layer) => {
+        layer.on('mouseover', () => layer.setStyle({ fillColor: ORANGE, fillOpacity: 0.35 }));
+        layer.on('mouseout', () => layer.setStyle(deptStyle()));
+      }
+    }).addTo(map);
+    regionLayer.bringToBack();
+    map.invalidateSize();
+    map.fitBounds(regionLayer.getBounds());
+
+    const byRegion = {};
+    entreprises.forEach(e => {
+      if (!e.lat || !e.lon) return;
+      const region = DEPT_TO_REGION[e.departement];
+      if (!region) return;
+      (byRegion[region] = byRegion[region] || []).push(e);
+    });
+
+    regionLayer.eachLayer(layer => {
+      const code = layer.feature.properties.code;
+      const list = byRegion[code];
+      if (!list) return;
+      const center = layer.getBounds().getCenter();
+      const icon = L.divIcon({
+        className: '',
+        html: `<div class="dept-count">${list.length}</div>`,
+        iconSize: [34, 34]
+      });
+      const marker = L.marker(center, { icon }).addTo(clusterLayer);
+      marker.on('click', () => map.fitBounds(layer.getBounds(), { maxZoom: 10 }));
+    });
+
+    clusterLayer.addTo(map);
+  });
+
+map.on('zoomend', () => {
+  const zoomedIn = map.getZoom() >= ZOOM_THRESHOLD;
+  if (zoomedIn) {
+    if (map.hasLayer(clusterLayer)) map.removeLayer(clusterLayer);
+    if (!map.hasLayer(pinLayer)) map.addLayer(pinLayer);
+  } else {
+    if (map.hasLayer(pinLayer)) map.removeLayer(pinLayer);
+    if (!map.hasLayer(clusterLayer)) map.addLayer(clusterLayer);
+  }
+});
+</script>
+</body>
+</html>
